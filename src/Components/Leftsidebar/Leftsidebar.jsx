@@ -4,8 +4,8 @@ import { Group, Groups, MonitorHeart, HeartBroken, VideoCall, Flag, ChatBubble, 
 import './Leftsidebar.css'
 const Leftsidebar = () => {
     return (
-        <Grid item xs={2} sm={12} md={3} lg={3}>
-            <Box className="leftSidebarArea">
+        <Grid className="leftSidebarArea" item sm={12} md={3} lg={3}>
+            <Box>
                 <Box sx={{ padding: "0px 10px" }}>
                     <ListItemButton sx={{ borderRadius: "10px" }}>
                         <ListItemIcon>
@@ -92,7 +92,6 @@ const Leftsidebar = () => {
                         <ListItemText primary="Live Videos" />
                     </ListItemButton>
                 </Box>
-
             </Box>
         </Grid>
     )

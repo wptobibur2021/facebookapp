@@ -4,7 +4,7 @@ import data from '../../data/dummy.json'
 const Rightsidebar = () => {
     const [users, setUsers] = useState(data.data)
     return (
-        <Grid item xs={2} sm={12} md={3} lg={3}>
+        <Grid item xs={2} sm={12} md={3} lg={3} className="rightBarArea">
             <Box sx={{ padding: "0px 10px" }}>
                 <Typography variant='h6' sx={{ color: '#65676b' }}>
                     Contacts
