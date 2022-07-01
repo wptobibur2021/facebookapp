@@ -1,16 +1,7 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
+import { Container, AppBar, MenuItem, Tooltip, Avatar, ListItemButton, Menu, ListItemIcon, Box, Toolbar, IconButton, Typography } from '@mui/material';
+import { Search, Home, Storefront, Groups, NotificationsActive, ViewComfy, MapsUgc, DashboardCustomize } from '@mui/icons-material'
 import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
 const pages = ['Products', 'Pricing', 'Blog'];
@@ -36,27 +27,10 @@ const Navbar = () => {
     };
 
     return (
-        <AppBar position="static">
+        <AppBar sx={{ backgroundColor: '#fff' }} position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="a"
-                        href="/"
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        LOGO
-                    </Typography>
+                    <Avatar src="/assets/images/logo.png" />
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
@@ -114,21 +88,54 @@ const Navbar = () => {
                         LOGO
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        {pages.map((page) => (
-                            <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                            >
-                                {page}
-                            </Button>
-                        ))}
+                        <Box sx={{ backgroundColor: '#f0f2f5', ml: 1, borderRadius: '25px', display: 'flex', alignItems: 'center' }}>
+                            <Search sx={{ color: '#111', ml: 1 }} />
+                            <input type="text" placeholder="Search Facebook" className="searchInput" />
+                        </Box>
                     </Box>
 
-                    <Box sx={{ flexGrow: 0 }}>
+                    <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-evenly' }}>
+                        <ListItemButton sx={{ borderRadius: "10px" }}>
+                            <ListItemIcon sx={{ display: 'flex', alignItems: 'center' }}>
+                                <Home sx={{ fontSize: '30px' }} />
+                            </ListItemIcon>
+                        </ListItemButton>
+                        <ListItemButton sx={{ borderRadius: "10px" }}>
+                            <ListItemIcon sx={{ position: 'relative' }}>
+                                <Storefront sx={{ fontSize: '30px' }} />
+                            </ListItemIcon>
+                        </ListItemButton>
+                        <ListItemButton sx={{ borderRadius: "10px" }}>
+                            <ListItemIcon sx={{ position: 'relative' }}>
+                                <Groups sx={{ fontSize: '30px' }} />
+                            </ListItemIcon>
+                        </ListItemButton>
+                        <ListItemButton sx={{ borderRadius: "10px" }}>
+                            <ListItemIcon sx={{ position: 'relative' }}>
+                                <DashboardCustomize sx={{ fontSize: '30px' }} />
+                            </ListItemIcon>
+                        </ListItemButton>
+                    </Box>
+
+                    <Box sx={{ flexGrow: 0, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                        <ListItemButton sx={{ borderRadius: "10px" }}>
+                            <ListItemIcon sx={{ position: 'relative' }}>
+                                <ViewComfy sx={{ fontSize: '30px' }} />
+                            </ListItemIcon>
+                        </ListItemButton>
+                        <ListItemButton sx={{ borderRadius: "10px" }}>
+                            <ListItemIcon sx={{ position: 'relative' }}>
+                                <MapsUgc sx={{ fontSize: '30px' }} />
+                            </ListItemIcon>
+                        </ListItemButton>
+                        <ListItemButton sx={{ borderRadius: "10px" }}>
+                            <ListItemIcon sx={{ position: 'relative' }}>
+                                <NotificationsActive sx={{ fontSize: '30px' }} />
+                            </ListItemIcon>
+                        </ListItemButton>
                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                                <Avatar alt="Tobibur Rohman" src="/assets/images/users/tobibur.png" />
                             </IconButton>
                         </Tooltip>
                         <Menu

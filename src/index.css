@@ -39,6 +39,17 @@ img.postReactionIcon {
   overflow-y: scroll;
   position: sticky;
 }
+.searchInput{
+  background-color: #f0f2f5;
+  border: none;
+  padding: 10px 0px;
+  margin-left: 10px;
+  border-radius: 25px;
+  font-size: 18px;
+}
+:focus-visible {
+  outline: -webkit-focus-ring-color auto 0px;
+}
 ::-webkit-scrollbar{
   width: 7px;
 }
