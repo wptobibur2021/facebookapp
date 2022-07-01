@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* CSS Below */
+.activeUser{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  right: 18px;
+  bottom: 0;
+}
+img.postReactionIcon {
+  width: 20px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.sharePost:hover{
+  background-color: transparent
+}
+
