@@ -14,7 +14,7 @@ const Navbar = () => {
     };
 
     return (
-        <AppBar sx={{ backgroundColor: '#fff' }} position="static">
+        <AppBar sx={{ backgroundColor: '#fff', boxShadow: 3, bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#101010' : '#fff'), }} position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Avatar src="/assets/images/logo.png" />

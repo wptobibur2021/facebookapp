@@ -1,10 +1,16 @@
-# Getting Started with Create React App
+# Facebook React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You can see live websiten [Click here](https://facebookapp-six.vercel.app/)
 
-## Available Scripts
+## List using package & others
 
-In the project directory, you can run:
+### Material UI
+[Material UI] (https://mui.com/) is a library of React UI components that implements Google's Material Design.
+
+### Components Based Design
+### Dummy JSON Data use
+### Timeago React
+[timeago-react](https://www.npmjs.com/package/timeago-react) is a simple react component used to format date.
 
 ### `npm start`
 
