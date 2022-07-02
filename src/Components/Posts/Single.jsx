@@ -1,12 +1,9 @@
 import React from 'react'
-import { Card, Box, IconButton, CardHeader, Avatar, CardMedia, ListItemButton, ListItemIcon, ListItemText, CardContent, Typography } from '@mui/material'
+import { Card, Box, Link, IconButton, CardHeader, Avatar, CardMedia, ListItemButton, ListItemIcon, ListItemText, CardContent, Typography } from '@mui/material'
 import { MoreHoriz, ThumbUp, ChatBubbleOutline, Shortcut } from '@mui/icons-material';
 import { format } from "timeago.js"
 const Single = ({ post }) => {
     const { caption, created_time, images } = post
-    console.log('Post', post)
-    const date = new Date(created_time);
-    console.log('Date:', date)
     return (
         <Card sx={{ mb: 2 }}>
             <CardHeader
@@ -24,7 +21,7 @@ const Single = ({ post }) => {
             />
             <CardContent>
                 <Typography variant="p" sx={{ textAlign: 'justify' }} color="text.secondary">
-                    {caption.text.slice(0, 100)}...<a href="#">See more</a>
+                    {caption.text.slice(0, 100)}...<Link underline="hover" sx={{ color: '#000' }} href="#">See more</Link>
                 </Typography>
             </CardContent>
             <CardMedia
