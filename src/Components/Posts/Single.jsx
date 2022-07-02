@@ -44,7 +44,7 @@ const Single = ({ post }) => {
                     </Box>
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', padding: '10px 0px' }}>
-                    <ListItemButton sx={{ borderRadius: "5px", padding: '4px 10px', }}>
+                    <ListItemButton sx={{ borderRadius: "5px", padding: '4px 10px' }}>
                         <ListItemIcon sx={{ minWidth: '35px' }}>
                             <ThumbUp />
                         </ListItemIcon>
